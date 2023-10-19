@@ -1,7 +1,16 @@
 import React from 'react';
 
-const Categories = () => {
-  return <h2>categories component</h2>;
+const Categories = ({ categories, onSelect }) => {
+  return (
+    <>
+      {
+        categories.map((categorie, index) => (
+          <button className='filter-btn' key={index} onClick={onSelect(categorie)}>{categorie}</button>
+        ))
+      }
+    </>
+
+  )
 };
 
 export default Categories;
