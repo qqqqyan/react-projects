@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import data from './data';
 function App() {
   const [count, setCount] = useState(0);
-  let showTexts = []
+  const [texts, setTexts] = useState([]);
   const onSubmit = (e) => {
     e.preventDefault();
-    showTexts = data.slice(0, count)
-    console.log(showTexts);
+    setTexts(data.slice(0, count))
   }
   return (
     <section className='section-center'>
@@ -19,7 +18,7 @@ function App() {
         <button type='submit' className='btn'>GENERATE</button>
       </form>
       <article className='lorem-text'>
-        {showTexts && showTexts.map((text, index) => (
+        {texts && texts.map((text, index) => (
           <p key={index}>{text}</p>
         ))}
       </article>
