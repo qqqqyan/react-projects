@@ -1,5 +1,5 @@
-# react-projects-7-slider
+轮播展示
+动画：
+出现的slide都从100%到0移动，离开的都从0到100%移动，首张尾张相反。
 
-#### IN ACTION
-
-[Gatsby-Airtable Project](https://gatsby-airtable-design-project.netlify.app/)
+很妙的写法，利用更新的原理，自动给要离开的slide增加class
