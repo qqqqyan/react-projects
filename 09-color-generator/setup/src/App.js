@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 import SingleColor from './SingleColor'
 
-import rgbToHex from './utils'
 
 import Values from 'values.js'
 
 function App() {
-  const [hex, setHex] = useState('')
+  const [hex, setHex] = useState('#f15025')
+  const [panels, setPanels] = useState([])
   const handleSubmit = (e) => {
     e.preventDefault();
-    //new Values('#f15025').all(10)
+    const values = new Values(`${hex}`).all(10)
+    setPanels(values)
   }
   return (
     <main>
@@ -21,7 +22,9 @@ function App() {
         </form>
       </header>
       <section>
-        <SingleColor />
+        {panels.map((panel, index) => {
+          return <SingleColor key={index} {...panel} />
+        })}
       </section>
     </main>
   )
