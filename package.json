@@ -1,0 +1,27 @@
+{
+  "name": "react-projects",
+  "version": "1.0.0",
+  "description": "#### React Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qqqqyan/react-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qqqqyan/react-projects/issues"
+  },
+  "homepage": "https://github.com/qqqqyan/react-projects#readme",
+  "dependencies": {
+    "lerna": "^2.11.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "packages/*/final",
+    "packages/*/setup"
+  ]
+}
