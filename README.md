@@ -1,5 +1,25 @@
 # React Projects
 
+## 每个子项目的思考请看子项目setup下的README
+
+## monorepo管理
+
+#### 问题
+子项目过多，每个子项目的安装都需要大量的时间和占用空间
+
+#### 步骤（开发者）
+
+1. 把子项目移动到packages文件夹
+2. 安装lerna@2
+3. 添加workspace
+4. npx lerna init
+5. npx lerna bootstrap
+  
+#### 步骤（维护者）
+
+1. npm install
+2. npx lerna bootstrap
+
 #### React Course
 
 [My React Course](https://www.udemy.com/course/react-tutorial-and-projects-course/?referralCode=FEE6A921AF07E2563CEF)
@@ -66,3 +86,4 @@ Find the Content Useful? [You can always buy me a coffee](https://www.buymeacoff
 21. Movie DB
 22. Hacker News
 23. Quiz
+
